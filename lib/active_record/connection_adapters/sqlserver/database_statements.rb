@@ -3,7 +3,7 @@ module ActiveRecord
     module Sqlserver
       module DatabaseStatements
         
-        def select_rows(sql, name = nil)
+        def select_rows(sql, name = nil, binds = [])
           raw_select sql, name, [], :fetch => :rows
         end
 
